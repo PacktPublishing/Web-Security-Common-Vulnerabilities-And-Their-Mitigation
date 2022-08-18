@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+    <a>
+        Click me!
+    </a>
+    <div id="test">
+    </div>
+    <script>
+        var el = document.getElementById("test");
+        el.textContent = "<script>alert(hacked!)<\/script>";
+        el.setAttribute("style", "color<script><\/script>script>");
+        el.style.width = "<script>alert(hacked!)<\/script>";
+
+        document.querySelector('a').href = "javascript:alert(\"hack!\")";
+    </script>
+
+</body>
+</html>
